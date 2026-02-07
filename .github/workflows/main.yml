@@ -6,10 +6,8 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "CI job running"
+      - name: This will pass
+        run: echo "CI started"
 
-  cd:
-    needs: ci
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "CD job running - Deploying"
+      - name: This will FAIL
+        run: exit 1
