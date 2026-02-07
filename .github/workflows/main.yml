@@ -7,3 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello GitHub Actions"
+
+  cd:
+    needs: ci
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploying application"
