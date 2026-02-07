@@ -1,15 +1,15 @@
-name: My First Pipeline
+name: CI CD Pipeline
 
 on: push
 
 jobs:
-  test:
+  ci:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello GitHub Actions"
+      - run: echo "CI job running"
 
   cd:
     needs: ci
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Deploying application"
+      - run: echo "CD job running - Deploying"
